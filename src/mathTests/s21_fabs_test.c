@@ -3,28 +3,28 @@
 START_TEST(simple_test) {
   double x = 25.0; 
 
-  ck_assert_int_eq(s21_fabs(x), fabs(x));
+  ck_assert_double_eq(s21_fabs(x), fabs(x));
 }
 END_TEST
 
 START_TEST(big_num) {
     double x = 919188939128; 
 
-    ck_assert_int_eq(s21_fabs(x), fabs(x));
+    ck_assert_double_eq(s21_fabs(x), fabs(x));
 }
 END_TEST
 
 START_TEST(big_double_num) {
     double x = 0.00000008; 
 
-    ck_assert_int_eq(s21_fabs(x), fabs(x));
+    ck_assert_double_eq(s21_fabs(x), fabs(x));
 }
 END_TEST
 
 START_TEST(negative_num) {
     double x = -100.05; 
 
-    ck_assert_int_eq(s21_fabs(x), fabs(x));
+    ck_assert_double_eq(s21_fabs(x), fabs(x));
 }
 END_TEST
 
