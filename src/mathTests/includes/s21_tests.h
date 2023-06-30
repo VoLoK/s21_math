@@ -10,9 +10,9 @@
 Suite *suite_abs(void);
 Suite *suite_acos(void);
 Suite *suite_asin(void);
-//Suite *suite_memcpy(void);
-//Suite *suite_strchr(void);
-//Suite *suite_strerror(void);
+Suite *suite_exp(void);
+Suite *suite_sqrt(void);
+Suite *suite_fabs(void);
 //Suite *suite_strlen(void);
 //Suite *suite_strncat(void);
 //Suite *suite_strncmp(void);

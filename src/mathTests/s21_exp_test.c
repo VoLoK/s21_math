@@ -29,7 +29,7 @@ START_TEST(negative_num) {
 END_TEST
 
 
-Suite* suite_acos() {
+Suite* suite_exp() {
   Suite* suite = suite_create("exp_suite");
   TCase* tcase_core = tcase_create("exp_tc");
 
