@@ -5,7 +5,10 @@
 In this project you will develop your own version of the standard math.h library in the C programming language. This library implements basic mathematical operations, which are then used in various algorithms. As part of the project you will learn the basics of computational methods and solidify knowledge of structured programming.
 
 Information
-C mathematical operations are a group of functions in the standard library of the C programming language implementing basic mathematical functions. All functions use floating-point numbers in one manner or another. Different C standards provide different, albeit backwards-compatible, sets of functions. Any functions that operate on angles use radians as the unit of angle.
+C mathematical operations are a group of functions in the standard library of the C programming language implementing basic mathematical functions. 
+All functions use floating-point numbers in one manner or another. 
+Different C standards provide different, albeit backwards-compatible, sets of functions. 
+Any functions that operate on angles use radians as the unit of angle.
 
 Overview of some "math.h" functions
 
