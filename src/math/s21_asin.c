@@ -1,4 +1,4 @@
-#include "math.h"
+#include "s21_math.h"
 
 long double s21_asin(double x) {
     long double res = 0;

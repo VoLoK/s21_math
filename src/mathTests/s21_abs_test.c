@@ -2,14 +2,12 @@
 
 START_TEST(simple_test) {
   int num = 2;
-
   ck_assert_int_eq(s21_abs(num), abs(num));
 }
 END_TEST
 
 START_TEST(negative_num) {
     int num = -2;
-
     ck_assert_int_eq(s21_abs(num), abs(num));
 }
 END_TEST

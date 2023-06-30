@@ -3,12 +3,13 @@
 
 #include <check.h>
 #include <math.h>
+#include <time.h>
 
 #include "s21_math.h"
 
 Suite *suite_abs(void);
 Suite *suite_acos(void);
-//Suite *suite_memcmp(void);
+Suite *suite_asin(void);
 //Suite *suite_memcpy(void);
 //Suite *suite_strchr(void);
 //Suite *suite_strerror(void);

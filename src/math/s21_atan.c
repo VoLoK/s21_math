@@ -1,4 +1,4 @@
-#include "math.h"
+#include "s21_math.h"
 
 long double s21_atan(double x) {
     int is_valid = (x > -1 && x < 1);
@@ -14,10 +14,10 @@ long double s21_atan(double x) {
     }
     res = is_valid ? x : 1.0 / x;
     for (int i = 1; i < 7000; i++) {
-        double chisl = pow(-1, i) * pow(x, (1 + 2 * i) * (is_valid ? 1 : -1));
+        double chisl = s21_pow(-1, i) * s21_pow(x, (1 + 2 * i) * (is_valid ? 1 : -1));
         double znam = 1 + 2 * i;
         res += chisl / znam;
     }
-    if (!is_valid) res = (s21_PI * fabs(x) / (2 * x)) - res;
+    if (!is_valid) res = (s21_PI * s21_fabs(x) / (2 * x)) - res;
     return res;
 }

@@ -1,6 +1,3 @@
-#ifndef SRC_S21_MATH_H_
-#define SRC_S21_MATH_H_
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <limits.h>
@@ -16,7 +13,7 @@
 #define S21_LN10 2.30258509299404568402  // log_e 10 
 #define s21_IS_NAN(x) (x != x)
 
-int abs(int x);
+int s21_abs(int x);
 long double s21_acos(double x);
 long double s21_asin(double x);
 long double s21_atan(double x);
@@ -30,7 +27,4 @@ long double s21_pow(double base, double exp);
 long double s21_sin(double x);
 long double s21_sqrt(double x);
 long double s21_tan(double x);
-
 int s21_fact(int n);
-
-#endif
