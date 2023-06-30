@@ -1,6 +1,6 @@
 #include "s21_tests.h"
 
-#include <stdio.h>
+#include <math.h>
 
 int main(void) {
   run_tests();
@@ -27,6 +27,9 @@ void run_tests(void) {
   Suite *list_cases[] = {suite_abs(),
                          suite_acos(),
                          suite_asin(),
+                         suite_fabs(),
+                         suite_exp(),
+                         suite_sqrt(),
 //                         suite_strerror(),
 //                         suite_strlen(),
 //                         suite_strncat(),
