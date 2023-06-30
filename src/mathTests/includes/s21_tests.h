@@ -13,6 +13,8 @@ Suite *suite_asin(void);
 Suite *suite_exp(void);
 Suite *suite_sqrt(void);
 Suite *suite_fabs(void);
+Suite *suite_atan(void);
+Suite *suite_ceil(void);
 //Suite *suite_strlen(void);
 //Suite *suite_strncat(void);
 //Suite *suite_strncmp(void);
