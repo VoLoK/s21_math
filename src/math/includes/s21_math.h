@@ -1,3 +1,6 @@
+#ifndef SRC_S21_MATH_H_
+#define SRC_S21_MATH_H_
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <limits.h>
@@ -28,7 +31,6 @@ long double s21_sin(double x);
 long double s21_sqrt(double x);
 long double s21_tan(double x);
 
-
-
-
 int s21_fact(int n);
+
+#endif

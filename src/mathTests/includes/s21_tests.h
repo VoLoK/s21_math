@@ -1,5 +1,5 @@
-#ifndef SRC_S21_TESTS_H_
-#define SRC_S21_TESTS_H_
+#ifndef SRC_S21_MATH_TESTS_H_
+#define SRC_S21_MATH_TESTS_H_
 
 #include <check.h>
 #include <math.h>
