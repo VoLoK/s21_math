@@ -1,33 +1,32 @@
 #include "s21_tests.h"
 
 START_TEST(simple_test) {
-  double x = 0.5; 
+  double x = 0.5;
 
   ck_assert_double_eq(s21_exp(x), exp(x));
 }
 END_TEST
 
 START_TEST(big_num) {
-    double x = 12345678910; 
+  double x = 12345678910;
 
-    ck_assert_double_eq(s21_exp(x), exp(x));
+  ck_assert_int_eq(s21_exp(x), exp(x));
 }
 END_TEST
 
 START_TEST(big_double_num) {
-    double x = 0.00000008; 
+  double x = 0.00000008;
 
-    ck_assert_double_eq(s21_exp(x), exp(x));
+  ck_assert_int_eq(s21_exp(x), exp(x));
 }
 END_TEST
 
 START_TEST(negative_num) {
-    double x = -100.05; 
+  double x = -100.05;
 
-    ck_assert_double_eq(s21_exp(x), exp(x));
+  ck_assert_int_eq(s21_exp(x), exp(x));
 }
 END_TEST
-
 
 Suite* suite_exp() {
   Suite* suite = suite_create("exp_suite");
@@ -41,5 +40,3 @@ Suite* suite_exp() {
   suite_add_tcase(suite, tcase_core);
   return suite;
 }
-
-

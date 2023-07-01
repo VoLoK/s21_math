@@ -7,11 +7,10 @@ START_TEST(simple_test) {
 END_TEST
 
 START_TEST(negative_num) {
-    int num = -2;
-    ck_assert_int_eq(s21_abs(num), abs(num));
+  int num = -2;
+  ck_assert_int_eq(s21_abs(num), abs(num));
 }
 END_TEST
-
 
 Suite* suite_abs() {
   Suite* suite = suite_create("abs_suite");
@@ -23,4 +22,3 @@ Suite* suite_abs() {
   suite_add_tcase(suite, tcase_core);
   return suite;
 }
-
