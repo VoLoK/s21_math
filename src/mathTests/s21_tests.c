@@ -26,7 +26,7 @@ void run_testcase(Suite *testcase) {
 void run_tests(void) {
   Suite *list_cases[] = {suite_abs(), suite_acos(), suite_asin(), suite_fabs(),
                          suite_exp(), suite_sqrt(), suite_atan(), suite_ceil(),
-                         suite_cos(), suite_sin(),  suite_tan(),  NULL};
+                         suite_sin(), suite_tan(),  suite_cos(),  NULL};
 
   for (Suite **current_testcase = list_cases; *current_testcase != NULL;
        current_testcase++) {

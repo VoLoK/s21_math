@@ -43,13 +43,13 @@ START_TEST(test_7) {
 END_TEST
 
 START_TEST(test_8) {
-  float num = INFINITY;
+  float num = s21_INF_POS;
   ck_assert_double_eq(s21_atan(num), atan(num));
 }
 END_TEST
 
 START_TEST(test_9) {
-  float num = -INFINITY;
+  float num = s21_INF_NEG;
   ck_assert_double_eq(s21_atan(num), atan(num));
 }
 END_TEST

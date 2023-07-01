@@ -13,14 +13,15 @@ long double s21_atan(double x) {
     res = s21_PI / 4.0;
   } else if (x == -1) {
     res = -s21_PI / 4.0;
+  } else {
+    res = is_valid ? x : 1.0 / x;
+    for (int i = 1; i < 5000; i++) {
+      double chisl =
+          s21_pow(-1, i) * s21_pow(x, (1 + 2 * i) * (is_valid ? 1 : -1));
+      double znam = 1 + 2 * i;
+      res += chisl / znam;
+    }
+    if (!is_valid) res = (s21_PI * s21_fabs(x) / (2 * x)) - res;
   }
-  res = is_valid ? x : 1.0 / x;
-  for (int i = 1; i < 5000; i++) {
-    double chisl =
-        s21_pow(-1, i) * s21_pow(x, (1 + 2 * i) * (is_valid ? 1 : -1));
-    double znam = 1 + 2 * i;
-    res += chisl / znam;
-  }
-  if (!is_valid) res = (s21_PI * s21_fabs(x) / (2 * x)) - res;
   return res;
 }

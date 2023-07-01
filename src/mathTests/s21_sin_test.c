@@ -32,24 +32,24 @@ END_TEST
 
 START_TEST(test_6) {
   double num = 12;
-  ck_assert_double_nan(s21_sin(num));
+  ck_assert_double_eq_tol(s21_sin(num), sin(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_7) {
   double num = -12;
-  ck_assert_double_nan(s21_sin(num));
+  ck_assert_double_eq_tol(s21_sin(num), sin(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_8) {
-  float num = INFINITY;
+  float num = s21_INF_POS;
   ck_assert_double_nan(s21_sin(num));
 }
 END_TEST
 
 START_TEST(test_9) {
-  float num = -INFINITY;
+  float num = s21_INF_NEG;
   ck_assert_double_nan(s21_sin(num));
 }
 END_TEST
