@@ -1,43 +1,43 @@
 #include "s21_tests.h"
 
 START_TEST(test_1) {
-  int num = 0.82;
+  double num = 0.82;
   ck_assert_double_eq_tol(s21_asin(num), asin(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_2) {
-  int num = -0.23;
+  double num = -0.23;
   ck_assert_double_eq_tol(s21_asin(num), asin(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_3) {
-  int num = -1;
+  double num = -1;
   ck_assert_double_eq_tol(s21_asin(num), asin(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_4) {
-  int num = 1;
+  double num = 1;
   ck_assert_double_eq_tol(s21_asin(num), asin(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_5) {
-  int num = 0;
+  double num = 0;
   ck_assert_double_eq_tol(s21_asin(num), asin(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_6) {
-  int num = 12;
+  double num = 12;
   ck_assert_double_nan(s21_asin(num));
 }
 END_TEST
 
 START_TEST(test_7) {
-  int num = -12;
+  double num = -12;
   ck_assert_double_nan(s21_asin(num));
 }
 END_TEST

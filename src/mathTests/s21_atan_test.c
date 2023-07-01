@@ -1,43 +1,43 @@
 #include "s21_tests.h"
 
 START_TEST(test_1) {
-  int num = 0.321;
+  double num = 0.321;
   ck_assert_double_eq_tol(s21_atan(num), atan(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_2) {
-  int num = -0.93;
+  double num = -0.93;
   ck_assert_double_eq_tol(s21_atan(num), atan(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_3) {
-  int num = -1;
+  double num = -1;
   ck_assert_double_eq_tol(s21_atan(num), atan(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_4) {
-  int num = 1;
+  double num = 1;
   ck_assert_double_eq_tol(s21_atan(num), atan(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_5) {
-  int num = 0;
+  double num = 0;
   ck_assert_double_eq_tol(s21_atan(num), atan(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_6) {
-  int num = 16.13;
+  double num = 16.13;
   ck_assert_double_eq_tol(s21_atan(num), atan(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_7) {
-  int num = 16.13;
+  double num = 16.13;
   ck_assert_double_eq_tol(s21_atan(num), atan(num), 0.000001);
 }
 END_TEST
