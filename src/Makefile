@@ -58,7 +58,7 @@ add-coverage:
 	$(eval TEST_CFLAGS += --coverage)
 
 gcov_report: add-coverage test
-	gcovr -o gcov_report.html --html --html-details --display-progress
+	gcovr -o gcov_report.html --html --html-details --txt
 
 clang:
 	@cp ../materials/linters/.clang-format ./.clang-format
