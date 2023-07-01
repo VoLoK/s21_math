@@ -32,9 +32,25 @@ START_TEST(negative_base) {
 }
 END_TEST
 
-START_TEST(zero) {
+START_TEST(zero_base) {
   double base = 0;
   double exp = 2.5;
+
+  ck_assert_double_eq_tol(s21_pow(base, exp), pow(base, exp), 0.000001);
+}
+END_TEST
+
+START_TEST(zero_exp) {
+  double base = 2.0;
+  double exp = 0;
+
+  ck_assert_double_eq_tol(s21_pow(base, exp), pow(base, exp), 0.000001);
+}
+END_TEST
+
+START_TEST(negative_dauble_base) {
+  double base = -0.2;
+  double exp = 10.0;
 
   ck_assert_double_eq_tol(s21_pow(base, exp), pow(base, exp), 0.000001);
 }
@@ -48,7 +64,9 @@ Suite* suite_pow() {
   tcase_add_test(tcase_core, big_num);
   tcase_add_test(tcase_core, negative_exp);
   tcase_add_test(tcase_core, negative_base);
-  tcase_add_test(tcase_core, zero);
+  tcase_add_test(tcase_core, zero_base);
+  tcase_add_test(tcase_core, zero_exp);
+  tcase_add_test(tcase_core, negative_dauble_base);
 
   suite_add_tcase(suite, tcase_core);
   return suite;
