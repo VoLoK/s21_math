@@ -19,32 +19,32 @@ START_TEST(test_3) {
 END_TEST
 
 START_TEST(test_4) {
-    double num = s21_INF_POS;
-    ck_assert_double_eq(s21_ceil(num), ceil(num));
+  double num = s21_INF_POS;
+  ck_assert_double_eq(s21_ceil(num), ceil(num));
 }
 END_TEST
 
 START_TEST(test_5) {
-    double num = s21_INF_NEG;
-    ck_assert_double_eq(s21_ceil(num), ceil(num));
+  double num = s21_INF_NEG;
+  ck_assert_double_eq(s21_ceil(num), ceil(num));
 }
 END_TEST
 
 START_TEST(test_6) {
-    double num = s21_NAN;
-    ck_assert_double_nan(s21_ceil(num));
+  double num = s21_NAN;
+  ck_assert_double_nan(s21_ceil(num));
 }
 END_TEST
 
 START_TEST(test_7) {
-    float num = s21_NAN;
-    ck_assert_double_nan(s21_ceil(num));
+  float num = s21_NAN;
+  ck_assert_double_nan(s21_ceil(num));
 }
 END_TEST
 
 START_TEST(test_8) {
-    long double num = s21_NAN;
-    ck_assert_double_nan(s21_ceil(num));
+  long double num = s21_NAN;
+  ck_assert_double_nan(s21_ceil(num));
 }
 END_TEST
 
@@ -99,10 +99,9 @@ Suite* suite_ceil() {
   tcase_add_test(tcase_core, test_9);
   tcase_add_test(tcase_core, test_10);
   tcase_add_test(tcase_core, test_11);
-    tcase_add_test(tcase_core, test_12);
-    tcase_add_test(tcase_core, test_13);
-      tcase_add_test(tcase_core, test_14);
-
+  tcase_add_test(tcase_core, test_12);
+  tcase_add_test(tcase_core, test_13);
+  tcase_add_test(tcase_core, test_14);
 
   suite_add_tcase(suite, tcase_core);
   return suite;

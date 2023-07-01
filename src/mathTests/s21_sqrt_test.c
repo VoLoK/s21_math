@@ -1,33 +1,33 @@
 #include "s21_tests.h"
 
 START_TEST(simple_test) {
-  double x = 25.0; 
+  double x = 25.0;
 
   ck_assert_int_eq(s21_sqrt(x), sqrt(x));
 }
 END_TEST
 
 START_TEST(big_num) {
-    double x = 12345678910;         
+  double x = 12345678910;
 
-    ck_assert_int_eq(s21_sqrt(x), sqrt(x));
+  ck_assert_int_eq(s21_sqrt(x), sqrt(x));
 }
 END_TEST
 
 START_TEST(big_double_num) {
-    double x = 1000000.0003; 
+  double x = 1000000.0003;
 
-    ck_assert_int_eq(s21_sqrt(x), sqrt(x));
+  ck_assert_int_eq(s21_sqrt(x), sqrt(x));
 }
 END_TEST
 
 START_TEST(negative_num) {
-    double x = -234423.3242;; 
+  double x = -234423.3242;
+  ;
 
-    ck_assert_int_eq(s21_sqrt(x), sqrt(x));
+  ck_assert_int_eq(s21_sqrt(x), sqrt(x));
 }
 END_TEST
-
 
 Suite* suite_sqrt() {
   Suite* suite = suite_create("sqrt_suite");
@@ -41,5 +41,3 @@ Suite* suite_sqrt() {
   suite_add_tcase(suite, tcase_core);
   return suite;
 }
-
-

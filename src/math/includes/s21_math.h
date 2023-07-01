@@ -1,9 +1,9 @@
 #ifndef SRC_S21_MATH_H_
 #define SRC_S21_MATH_H_
 
-#include <stdlib.h>
-#include <stdio.h>
 #include <limits.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #define s21_PI 3.14159265358979323846
 #define s21_NAN 0.0 / 0.0
@@ -13,7 +13,7 @@
 #define s21_E 2.71828182845904523536028747
 #define s21_MAX_double 1.7976931348623157e308
 #define s21_EPS 1e-17
-#define S21_LN10 2.30258509299404568402  // log_e 10 
+#define S21_LN10 2.30258509299404568402  // log_e 10
 #define s21_IS_NAN(x) (x != x)
 
 int s21_abs(int x);

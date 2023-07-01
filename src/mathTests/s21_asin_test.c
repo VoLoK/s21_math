@@ -7,54 +7,52 @@ START_TEST(test_1) {
 END_TEST
 
 START_TEST(test_2) {
-    int num = -0.23;
-    ck_assert_double_eq_tol(s21_asin(num), asin(num), 0.000001);
+  int num = -0.23;
+  ck_assert_double_eq_tol(s21_asin(num), asin(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_3) {
-    int num = -1;
-    ck_assert_double_eq_tol(s21_asin(num), asin(num), 0.000001);
+  int num = -1;
+  ck_assert_double_eq_tol(s21_asin(num), asin(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_4) {
-    int num = 1;
-    ck_assert_double_eq_tol(s21_asin(num), asin(num), 0.000001);
+  int num = 1;
+  ck_assert_double_eq_tol(s21_asin(num), asin(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_5) {
-    int num = 0;
-    ck_assert_double_eq_tol(s21_asin(num), asin(num), 0.000001);
+  int num = 0;
+  ck_assert_double_eq_tol(s21_asin(num), asin(num), 0.000001);
 }
 END_TEST
 
 START_TEST(test_6) {
-    int num = 12;
-    ck_assert_double_nan(s21_asin(num));
+  int num = 12;
+  ck_assert_double_nan(s21_asin(num));
 }
 END_TEST
 
 START_TEST(test_7) {
-    int num = -12;
-    ck_assert_double_nan(s21_asin(num));
+  int num = -12;
+  ck_assert_double_nan(s21_asin(num));
 }
 END_TEST
 
 START_TEST(test_8) {
-    float num = INFINITY;
-    ck_assert_double_nan(s21_asin(num));
+  float num = INFINITY;
+  ck_assert_double_nan(s21_asin(num));
 }
 END_TEST
 
 START_TEST(test_9) {
-    float num = -INFINITY;
-    ck_assert_double_nan(s21_asin(num));
+  float num = -INFINITY;
+  ck_assert_double_nan(s21_asin(num));
 }
 END_TEST
-
-
 
 Suite* suite_asin() {
   Suite* suite = suite_create("asin_suite");
@@ -73,5 +71,3 @@ Suite* suite_asin() {
   suite_add_tcase(suite, tcase_core);
   return suite;
 }
-
-
