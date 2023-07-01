@@ -18,6 +18,10 @@ Suite *suite_ceil(void);
 Suite *suite_cos(void);
 Suite *suite_sin(void);
 Suite *suite_tan(void);
+Suite *suite_floor(void);
+Suite *suite_fmod(void);
+Suite *suite_log(void);
+Suite *suite_pow(void);
 
 void run_tests(void);
 void run_testcase(Suite *testcase);
