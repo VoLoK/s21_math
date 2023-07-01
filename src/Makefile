@@ -58,7 +58,6 @@ add-coverage:
 
 gcov_report: clean add-coverage test
 	@gcovr -o gcov_report.html --html --html-details
-	@open gcov_report.html
 
 clang:
 	@cp ../materials/linters/.clang-format ./.clang-format
