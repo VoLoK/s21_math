@@ -1,6 +1,9 @@
 # s21_math
 
-![1665034929](https://github.com/VoLoK/s21_math/assets/112762382/a3b97458-ea95-4c2a-a347-90b6993d372d)
+<picture>
+  <img src="https://github.com/VoLoK/s21_math/assets/112762382/a3b97458-ea95-4c2a-a347-90b6993d372d">
+</picture>
+
 
 In this project you will develop your own version of the standard math.h library in the C programming language. This library implements basic mathematical operations, which are then used in various algorithms. As part of the project you will learn the basics of computational methods and solidify knowledge of structured programming.
 
@@ -12,7 +15,23 @@ Any functions that operate on angles use radians as the unit of angle.
 
 Overview of some "math.h" functions
 
-<img width="814" alt="Screenshot 2023-06-30 at 20 00 07" src="https://github.com/VoLoK/s21_math/assets/112762382/b1084ce5-7d9d-4c79-a27a-df4fdcd88af9">
+| No. | Function | Description |
+| --- | -------- | ----------- |
+| 1 | `int abs(int x)` | computes absolute value of an integer value |
+| 2 | `long double acos(double x)` | computes arc cosine |
+| 3 | `long double asin(double x)` | computes arc sine |
+| 4 | `long double atan(double x)` | computes arc tangent |
+| 5 | `long double ceil(double x)` | returns the nearest integer not less than the given value |
+| 6 | `long double cos(double x)` | computes cosine |
+| 7 | `long double exp(double x)` | returns e raised to the given power |
+| 8 | `long double fabs(double x)` | computes absolute value of a floating-point value |
+| 9 | `long double floor(double x)` | returns the nearest integer not greater than the given value |
+| 10 | `long double fmod(double x, double y)` | remainder of the floating-point division operation |
+| 11 | `long double log(double x)` | computes natural logarithm |
+| 12 | `long double pow(double base, double exp)` | raises a number to the given power |
+| 13 | `long double sin(double x)` | computes sine |
+| 14 | `long double sqrt(double x)` | computes square root |
+| 15 | `long double tan(double x)` | computes tangent |  
 
 The functions of the math.h library must be implemented (only those directly described above):
 
