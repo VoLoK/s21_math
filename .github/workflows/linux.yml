@@ -15,7 +15,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
     - name: Install required dependencies
-      run: sudo apt-get update && sudo apt-get install -y build-essential git libtool check
+      run: sudo apt-get update && sudo apt-get install -y build-essential git libtool check gcovr
     - name: Build project
       run: |
         cd src
@@ -24,3 +24,7 @@ jobs:
       run: |
         cd src
         make test
+    - name: Check coverage
+      run: |
+        cd src
+        make gcov_report
