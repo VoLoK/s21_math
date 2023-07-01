@@ -58,6 +58,7 @@ add-coverage:
 	$(eval TEST_CFLAGS += --coverage)
 
 gcov_report: add-coverage test
+	gcov -b -l -p -c s21_*.gcno
 	gcovr -o gcov_report.html --html --html-details
 	cat gcov_report.html
 
