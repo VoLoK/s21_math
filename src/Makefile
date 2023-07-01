@@ -55,7 +55,7 @@ test: $(TARGET) $(TEST_TARGET)
 	@./$(TEST_EXE)
 	
 add-coverage:
-	$(eval TEST_CFLAGS += --coverage)
+	$(eval CFLAGS += --coverage)
 
 gcov_report: add-coverage test
 	gcov -b -l -p -c s21_*.gcno
