@@ -54,7 +54,11 @@ test: $(TARGET) $(TEST_TARGET)
 	@$(CC) $(TEST_OBJ) $(TEST_TARGET) -o $(TEST_EXE) $(TEST_CFLAGS) -L. $(TARGET)
 	@./$(TEST_EXE)
 	
-gcov_report:
+add-coverage:
+	$(eval TEST_CFLAGS += --coverage)
+
+gcov_report: add-coverage test
+	gcovr -o gcov_report.html --html --html-details
 
 clang:
 	@cp ../materials/linters/.clang-format ./.clang-format
@@ -68,9 +72,8 @@ clang-fix:
 
 clean:
 	@$(RM) $(OBJ)
-	@$(RM) -d $(OBJ_DIR)
-	@$(RM) $(TEST_OBJ)
-	@$(RM) -d $(TEST_OBJ_DIR)
+	@$(RM) -r $(OBJ_DIR)
+	@$(RM) -r $(TEST_OBJ_DIR)
 	@$(RM) $(TARGET)
 	@$(RM) $(TEST_TARGET)
 	@$(RM) $(TEST_EXE)
