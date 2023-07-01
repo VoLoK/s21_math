@@ -40,6 +40,14 @@ START_TEST(inf_x) {
 }
 END_TEST
 
+START_TEST(inf_y) {
+  double x = 2.0;
+  double y = s21_INF_POS;
+
+  ck_assert_double_eq(s21_fmod(x, y), fmod(x, y));
+}
+END_TEST
+
 Suite* suite_fmod() {
   Suite* suite = suite_create("fmod_suite");
   TCase* tcase_core = tcase_create("fmod_tc");
@@ -49,6 +57,7 @@ Suite* suite_fmod() {
   tcase_add_test(tcase_core, negative_num);
   tcase_add_test(tcase_core, zero_x);
   tcase_add_test(tcase_core, inf_x);
+  tcase_add_test(tcase_core, inf_y);
 
   suite_add_tcase(suite, tcase_core);
   return suite;

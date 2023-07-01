@@ -2,19 +2,19 @@
 
 START_TEST(simple_test) {
   int num = 1;
-  ck_assert_int_eq(s21_abs(num), abs(num));
+  ck_assert_int_eq(s21_fact(num), 1);
 }
 END_TEST
 
 START_TEST(simple_test2) {
   int num = 3;
-  ck_assert_int_eq(s21_abs(num), abs(num));
+  ck_assert_int_eq(s21_fact(num), 6);
 }
 END_TEST
 
 START_TEST(zero_num) {
   int num = 0;
-  ck_assert_int_eq(s21_abs(num), abs(num));
+  ck_assert_int_eq(s21_fact(num), 1);
 }
 END_TEST
 
