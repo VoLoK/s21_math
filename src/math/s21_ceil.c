@@ -1,15 +1,17 @@
 #include "s21_math.h"
 
 long double s21_ceil(double x) {
-    long double res = 0;
-    if (x == s21_NAN) {
-        res = s21_NAN;
+    long double res = s21_NAN;
+    if (x == s21_INF_POS) {
+        res = s21_INF_POS;
+    } else if (x == s21_INF_NEG) {
+        res = s21_INF_NEG;
     } else if (x < 0) {
-        res = (int)-x;
+        res = (unsigned long int)-x;
         res = -res;
-    } else {
-        res = (int)x;
-        res += 1;
+    } else if (x >= 0) {
+        res = (unsigned long int)x;
+        res = res == x ? x : res + 1;
     }
     return res;
 }

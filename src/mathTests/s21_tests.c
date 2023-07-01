@@ -32,20 +32,9 @@ void run_tests(void) {
                          suite_sqrt(),
                          suite_atan(),
                          suite_ceil(),
-//                         suite_strncat(),
-//                         suite_strncmp(),
-//                         suite_memcmp(),
-//                         suite_memcpy(),
-//                         suite_strncpy(),
-//                         suite_strpbrk(),
-//                         suite_strrchr(),
-//                         suite_strstr(),
-//                         suite_strtok(),
-//                         suite_insert(),
-//                         suite_trim(),
-//                         suite_to_upper(),
-//                         suite_to_lower(),
-//                         suite_sprintf(),
+                         suite_cos(),
+                         suite_sin(),
+                         suite_tan(),
                          NULL};
 
   for (Suite **current_testcase = list_cases; *current_testcase != NULL;
