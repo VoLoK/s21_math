@@ -22,6 +22,7 @@ Suite *suite_floor(void);
 Suite *suite_fmod(void);
 Suite *suite_log(void);
 Suite *suite_pow(void);
+Suite *suite_fact(void);
 
 void run_tests(void);
 void run_testcase(Suite *testcase);

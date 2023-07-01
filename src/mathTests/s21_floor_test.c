@@ -21,6 +21,13 @@ START_TEST(negative_num) {
 }
 END_TEST
 
+START_TEST(zero) {
+  double x = 0.0;
+
+  ck_assert_double_eq(s21_floor(x), floor(x));
+}
+END_TEST
+
 Suite* suite_floor() {
   Suite* suite = suite_create("floor_suite");
   TCase* tcase_core = tcase_create("floor_tc");
@@ -28,6 +35,7 @@ Suite* suite_floor() {
   tcase_add_test(tcase_core, simple_test);
   tcase_add_test(tcase_core, big_num);
   tcase_add_test(tcase_core, negative_num);
+  tcase_add_test(tcase_core, zero);
 
   suite_add_tcase(suite, tcase_core);
   return suite;
