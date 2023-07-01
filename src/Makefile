@@ -54,8 +54,7 @@ test: $(TARGET) $(TEST_TARGET)
 	@$(CC) $(TEST_OBJ) $(TEST_TARGET) -o $(TEST_EXE) $(TEST_CFLAGS) -L. $(TARGET)
 	@./$(TEST_EXE)
 	
-add-coverage:
-	TEST_CFLAGS += --coverage
+add-coverage: TEST_CFLAGS += --coverage
 
 gcov_report: add-coverage test
 	gcov -b -l -p -c s21_*.gcno
