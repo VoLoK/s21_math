@@ -28,7 +28,6 @@ RM:= rm -f
 
 CFLAGS= -Wall -Wextra -Werror -std=c11
 TEST_CFLAGS= -g $(CFLAGS) $(shell pkg-config --cflags --libs check) -lm
-GCOV_FLAGS?= -fprofile-arcs -ftest-coverage
 
 all: $(TARGET)
 
@@ -54,12 +53,12 @@ test: $(TARGET) $(TEST_TARGET)
 	@$(CC) $(TEST_OBJ) $(TEST_TARGET) -o $(TEST_EXE) $(TEST_CFLAGS) -L. $(TARGET)
 	@./$(TEST_EXE)
 	
-add-coverage: TEST_CFLAGS += --coverage
+add-coverage: 
+	$(eval CFLAGS += --coverage)
 
-gcov_report: add-coverage test
-	gcov -b -l -p -c s21_*.gcno
-	gcovr -o gcov_report.html --html --html-details
-	cat gcov_report.html
+gcov_report: clean add-coverage test
+	@gcovr -o gcov_report.html --html --html-details
+	@open gcov_report.html
 
 clang:
 	@cp ../materials/linters/.clang-format ./.clang-format
@@ -78,6 +77,7 @@ clean:
 	@$(RM) $(TARGET)
 	@$(RM) $(TEST_TARGET)
 	@$(RM) $(TEST_EXE)
+	@$(RM) gcov*
 	@echo "\033[1;31mAll objects have been removed.\033[0m"
 
 re: clean all
